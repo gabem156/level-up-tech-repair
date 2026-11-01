@@ -16,7 +16,7 @@ Service-card photos load from Unsplash and are lazy-loaded where appropriate. Th
 
 The primary website domain is `https://www.leveluptechrepairfl.com/`; the `.tech` domain is reserved for Square booking. The Square booking URL and public contact email are configured in `config.js`. Contact is email-only; keep `phone` blank unless the business later chooses to publish a call/text number. The Facebook page and Instagram profile are also configured there. Add an entry to `verifiedModelPrices` only after confirming the price for an exact model and repair; use `category|manufacturer|model|repair name` as the key and a display-ready price such as `From $99` as the value. Without a matching entry, the repair finder displays “Request a Quote.” The pricing section lists general starting prices and states that final pricing depends on the device, diagnosis, and parts.
 
-The $25 booking deposit is disclosed as due once per appointment, applied toward the final repair cost, and non-refundable if the customer cancels. The site does not process payment. Booking links lead to the general Square site, so verify Square is configured to collect one deposit and apply it to the final repair before publishing. A separate $25 diagnostic fee may apply when diagnosis is required.
+The $25 booking deposit is disclosed as due once per appointment, applied toward the final repair cost, and non-refundable if the customer cancels. The site does not process payment. Booking links lead to the general Square site, so verify Square is configured to collect one deposit and apply it to the final repair before publishing. Diagnostics are free when the customer approves the recommended repair; if the customer declines it, a $35 diagnostic fee applies.
 
 ## GitHub Pages
 
