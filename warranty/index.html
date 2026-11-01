@@ -24,7 +24,15 @@
       document.addEventListener("DOMContentLoaded", () => {
         const bookingUrl = window.LEVEL_UP_CONFIG?.bookingUrl;
         document.querySelectorAll("[data-booking-link]").forEach((link) => {
-          if (bookingUrl) { link.href = bookingUrl; link.target = "_blank"; link.rel = "noopener noreferrer"; }
+          if (!bookingUrl) return;
+          link.href = bookingUrl;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.addEventListener("click", (event) => {
+            event.preventDefault();
+            const accepted = window.confirm("Before continuing to Square: the $25 booking deposit is due once per appointment, is applied toward the final repair cost, and is non-refundable if you cancel. This website does not collect payment. Square controls checkout; confirm the payment screen shows one deposit for your appointment before paying.");
+            if (accepted) window.open(bookingUrl, "_blank", "noopener,noreferrer");
+          });
         });
         const menuButton = document.querySelector(".menu-toggle");
         const nav = document.querySelector("#primary-nav");
@@ -45,10 +53,10 @@
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
     <header class="site-header">
-      <a class="brand" href="/" aria-label="Level Up Tech Repair home"><img class="brand-logo" src="../logo.png" alt="Level Up Tech Repair" /></a>
+      <a class="brand" href="../index.html" aria-label="Level Up Tech Repair home"><img class="brand-logo" src="../logo.png" alt="Level Up Tech Repair" /></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button>
       <nav class="nav" id="primary-nav" aria-label="Main navigation">
-        <a href="/#repairs">Repairs</a><a href="/#mobile-service">Mobile Service</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a>
+        <a href="../index.html#repairs">Repairs</a><a href="../index.html#mobile-service">Mobile Service</a><a href="../index.html#pricing">Pricing</a><a href="../index.html#faq">FAQ</a>
         <a class="nav-cta" data-booking-link href="https://www.leveluptechrepairfl.tech/">Book a Repair <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
@@ -115,6 +123,6 @@
         </div>
       </section>
     </main>
-    <footer class="footer"><div class="section-container footer-inner"><a class="brand brand-footer" href="/" aria-label="Level Up Tech Repair home"><img class="brand-logo" src="../logo.png" alt="Level Up Tech Repair" /></a><div class="footer-details"><p><b>Mobile Service:</b> Seminole &amp; Volusia counties. A $30 travel fee applies only outside those counties; contact us to confirm availability.</p><p><b>Business Hours:</b> Monday–Friday, 3 PM–8 PM · Saturday–Sunday, 11 AM–7 PM</p><a href="mailto:info@leveluptechrepairfl.com">info@leveluptechrepairfl.com</a><a class="policy-footer-link" href="/warranty/" aria-current="page">Warranty &amp; Repair Policy</a></div><a class="footer-top" href="#main">Back to top ↑</a><small>© 2026 Level Up Tech Repair</small></div></footer>
+    <footer class="footer"><div class="section-container footer-inner"><a class="brand brand-footer" href="../index.html" aria-label="Level Up Tech Repair home"><img class="brand-logo" src="../logo.png" alt="Level Up Tech Repair" /></a><div class="footer-details"><p><b>Mobile Service:</b> Seminole &amp; Volusia counties. A $30 travel fee applies only outside those counties; contact us to confirm availability.</p><p><b>Business Hours:</b> Monday–Friday, 3 PM–8 PM · Saturday–Sunday, 11 AM–7 PM</p><a href="mailto:info@leveluptechrepairfl.com">info@leveluptechrepairfl.com</a><a class="policy-footer-link" href="./index.html" aria-current="page">Warranty &amp; Repair Policy</a></div><a class="footer-top" href="#main">Back to top ↑</a><small>© 2026 Level Up Tech Repair</small></div></footer>
   </body>
 </html>
