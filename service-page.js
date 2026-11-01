@@ -1,6 +1,10 @@
 (() => {
   const config = window.LEVEL_UP_CONFIG || {};
   const bookingUrl = config.bookingUrl;
+  // Guard against a template token leaking into the visible starting price.
+  document.querySelectorAll(".service-price strong").forEach((price) => {
+    price.textContent = price.textContent.replace(/^\s*priceFrom\s*/i, "").trim();
+  });
   document.querySelectorAll("[data-booking-link]").forEach((link) => {
     if (!bookingUrl) return;
     link.href = bookingUrl;

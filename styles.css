@@ -477,3 +477,42 @@ h1, h2, h3, p { margin-top: 0; }
 .service-card-links a { color: var(--cyan); font-size: 12px; line-height: 1.45; font-weight: 800; }
 .service-card-links a:hover { color: white; text-decoration: underline; text-underline-offset: 3px; }
 @media (min-width: 681px) { .repair-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; } }
+
+/* Shared service detail pages */
+.service-hero { padding: 76px 0 72px; color: #fff; background: radial-gradient(ellipse at 85% 0, #172c7a 0%, transparent 42%), linear-gradient(135deg, #07112e, #0b1c49); }
+.service-hero .section-container { max-width: 960px; }
+.service-hero h1 { max-width: 850px; margin: 0 0 20px; color: #fff; font: 800 clamp(38px, 5.2vw, 62px)/1.08 var(--font-display); letter-spacing: -.055em; }
+.service-intro { max-width: 760px; margin: 0; color: #e0e9fc; font-size: 17px; line-height: 1.75; }
+.service-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 27px; }
+.service-content { padding: 56px 0 72px; color: #172344; background: linear-gradient(145deg, #f4faff, #e5f2ff); }
+.service-content-grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 24px; align-items: start; }
+.service-article { display: grid; gap: 16px; min-width: 0; }
+.service-panel, .service-aside { padding: 24px; border: 1px solid #cbd9ed; border-radius: 10px; background: #fff; box-shadow: 0 12px 32px #183c760d; }
+.service-panel h2, .service-aside h2 { margin: 0 0 12px; color: #101a44; font: 800 21px/1.25 var(--font-display); letter-spacing: -.025em; }
+.service-panel p, .service-aside > p:not(.eyebrow) { margin: 0 0 12px; color: #3f4d69; font-size: 15px; line-height: 1.7; }
+.service-panel p:last-child, .service-aside > p:last-child { margin-bottom: 0; }
+.service-price { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin: 4px 0 14px; padding: 15px 0; border-top: 1px solid #d5e1f4; border-bottom: 1px solid #d5e1f4; }
+.service-price span { color: #43516e; font-size: 14px; line-height: 1.5; }
+.service-price strong { color: #101a44; font: 800 23px/1.2 var(--font-display); white-space: nowrap; }
+.service-aside { position: sticky; top: 108px; display: grid; gap: 12px; }
+.service-aside .eyebrow { margin: 0; color: #344bc4; }
+.service-aside .button { width: 100%; }
+.service-warranty-note { color: #43516e !important; font-size: 13px !important; }
+.service-warranty-note a { color: #1739c7; font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
+.service-related-section { padding: 40px 0 52px; color: #fff; background: #07112e; }
+.service-related-heading { margin: 0 0 17px; color: #fff; font: 800 24px/1.25 var(--font-display); }
+.service-related { display: flex; flex-wrap: wrap; gap: 10px; }
+.service-related a { padding: 10px 13px; border: 1px solid #53699a; border-radius: 5px; color: #e1ebff; background: #0b1941; font-size: 13px; font-weight: 700; }
+.service-related a:hover { border-color: var(--cyan); color: var(--cyan); }
+@media (max-width: 760px) {
+  .service-hero { padding: 54px 0 52px; }
+  .service-content { padding: 34px 0 48px; }
+  .service-content-grid { grid-template-columns: 1fr; }
+  .service-aside { position: static; }
+}
+@media (max-width: 480px) {
+  .service-hero .section-container, .service-content .section-container, .service-related-section .section-container { width: min(100% - 36px, 1160px); }
+  .service-intro { font-size: 15px; }
+  .service-panel, .service-aside { padding: 19px; }
+  .service-price { align-items: flex-start; flex-direction: column; gap: 7px; }
+}
