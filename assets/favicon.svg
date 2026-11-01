@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Level Up Tech Repair</title>
+  <rect width="64" height="64" rx="12" fill="#07112e"/>
+  <path d="M12 12 23 21 32 7 41 21 52 12 48 32H16Z" fill="#00e5ff"/>
+  <path d="M19 39v14h14" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m30 51 17-17m-9 0h9v9" fill="none" stroke="#00e5ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
