@@ -246,12 +246,13 @@
   document.querySelectorAll("[data-facebook-link]").forEach((link) => { if (config.facebookUrl) link.href = config.facebookUrl; });
   document.querySelectorAll("[data-instagram-link]").forEach((link) => { if (config.instagramUrl) link.href = config.instagramUrl; });
 
-  const reviewsLink = document.querySelector("[data-reviews-link]");
-  if (reviewsLink && config.googleBusinessUrl) {
-    reviewsLink.href = config.googleBusinessUrl;
-    reviewsLink.target = "_blank";
-    reviewsLink.rel = "noopener noreferrer";
-  }
+  document.querySelectorAll("[data-reviews-link]").forEach((reviewsLink) => {
+    if (config.googleBusinessUrl) {
+      reviewsLink.href = config.googleBusinessUrl;
+      reviewsLink.target = "_blank";
+      reviewsLink.rel = "noopener noreferrer";
+    }
+  });
 
   const menuButton = document.querySelector(".menu-toggle");
   const nav = document.querySelector("#primary-nav");

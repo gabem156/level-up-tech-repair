@@ -6,7 +6,7 @@ window.LEVEL_UP_CONFIG = {
   // Add an entry only after confirming the price for the exact model and repair.
   // Key format: category|manufacturer|model|repair name
   verifiedModelPrices: {},
-  googleBusinessUrl: "",
+  googleBusinessUrl: "https://g.page/r/CfdnvCPqoSfuEBM/review",
   facebookUrl: "https://www.facebook.com/leveluptechrepair",
   instagramUrl: "https://www.instagram.com/leveluptechrepair",
 };
