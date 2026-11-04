@@ -247,6 +247,7 @@ h1, h2, h3, p { margin-top: 0; }
   .nav-cta { justify-content: center; margin-top: 14px; }
   .hero-inner { padding-block: 42px 28px; grid-template-columns: 1fr; gap: 25px; }
   .hero { background-image: linear-gradient(180deg, #030a1bed 0%, #030a1bdc 48%, #030a1b88 100%), url("assets/hero-repair-workstation.webp"); background-position: center, 75% center; background-size: 100% 100%, auto 100%; }
+  .hero-copy { min-width: 0; }
   .hero h1 { font-size: clamp(49px, 13vw, 67px); }
   .hero-lede { max-width: 560px; font-size: 15px; }
   .hero-meta { margin-top: 24px; }
