@@ -35,11 +35,6 @@
           link.href = bookingUrl;
           link.target = "_blank";
           link.rel = "noopener noreferrer";
-          link.addEventListener("click", (event) => {
-            event.preventDefault();
-            const accepted = window.confirm("Before scheduling with Acuity: the $25 booking deposit is due once per appointment, is applied toward the final repair cost, and is non-refundable if you cancel. This website does not collect payment. Square handles deposit checkout; confirm the payment screen shows one deposit for your appointment before paying.");
-            if (accepted) window.open(bookingUrl, "_blank", "noopener,noreferrer");
-          });
         });
         const menuButton = document.querySelector(".menu-toggle");
         const nav = document.querySelector("#primary-nav");
@@ -78,7 +73,7 @@
       <section class="policy-summary" aria-label="Policy highlights">
         <div class="section-container policy-summary-grid">
           <div class="policy-summary-card"><span aria-hidden="true">90</span><strong>90-Day Limited Repair Warranty</strong></div>
-          <div class="policy-summary-card"><span aria-hidden="true">$</span><strong>$35 Diagnostic Fee When Repair Is Declined</strong></div>
+          <div class="policy-summary-card"><span aria-hidden="true">$</span><strong>$45 Appointment Diagnostic & Consultation Fee</strong></div>
           <div class="policy-summary-card"><span aria-hidden="true">100%</span><strong>Special-Order Parts Require Full Part-Cost Deposit</strong></div>
         </div>
       </section>
@@ -107,7 +102,7 @@
               <p>Repair estimates are based on the information available at the time of inspection. An estimate may change if additional damage or problems are discovered.</p><p>Customers will be notified of additional costs and must approve additional work before it proceeds.</p><p>For special-order parts, a deposit equal to 100% of the special-order part cost is required before the part is ordered.</p><p>The customer will be informed of the deposit amount and applicable cancellation and refund terms before payment is collected.</p><p>Deposits are not routinely required for repairs using parts already available.</p>
             </article>
             <article class="policy-section" id="diagnostics"><h2><span>07</span> Diagnostics and Inspection</h2>
-              <p>Diagnostic services are free when the customer approves the recommended repair.</p><p>If the customer declines the recommended repair, a $35 diagnostic fee applies.</p><p>The diagnostic fee will be disclosed and approved by the customer before chargeable diagnostic work begins.</p><p>Some devices may require additional testing to identify intermittent or complex problems. Any additional charges must be communicated and approved before the work proceeds.</p>
+              <p>The Acuity appointment includes a professional diagnostic and consultation for $45, paid through Acuity.</p><p>If the customer approves the repair, the $45 appointment fee is credited toward the repair total. If the customer decides not to proceed, the fee covers the diagnostic and consultation service.</p><p>Additional repair costs, including parts, will be discussed and approved before work begins.</p><p>Some devices may require additional testing to identify intermittent or complex problems. Any additional charges must be communicated and approved before the work proceeds.</p>
             </article>
             <article class="policy-section" id="pickup"><h2><span>08</span> Device Pickup and Unclaimed Devices</h2>
               <p>Once a repair is completed, Level Up Tech Repair will notify the customer that the device is ready for pickup or delivery.</p><p>We will communicate with customers to establish a reasonable pickup deadline.</p><p>If a customer cannot collect the device within the agreed timeframe, they should contact us to arrange an extension.</p><p>Any additional storage, handling, or disposition arrangements will be communicated separately. Devices will not be treated as abandoned or disposed of solely because an initial pickup deadline has passed. Applicable law will govern any unclaimed property.</p>

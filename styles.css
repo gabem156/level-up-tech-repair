@@ -74,6 +74,22 @@ h1, h2, h3, p { margin-top: 0; }
 .section-heading h2, .mobile-copy h2, .why-inner h2, .contact-inner h2 { margin: 0; font: 800 clamp(34px, 4.3vw, 50px)/1.08 var(--font-display); letter-spacing: -.06em; }
 .section-heading > p { max-width: 390px; margin: 0 0 4px; color: var(--muted); font-size: 15px; line-height: 1.75; }
 .finder-heading h2 { color: var(--navy); }
+.appointment-section { padding: 88px 0 96px; color: white; background: radial-gradient(ellipse at 85% 10%, #172c7a 0%, transparent 42%), linear-gradient(145deg, #07112e, #0b1c49); }
+.appointment-heading { max-width: 790px; margin: 0 0 32px; }
+.appointment-heading h2 { margin: 0 0 14px; color: white; font: 800 clamp(36px, 4.5vw, 52px)/1.08 var(--font-display); letter-spacing: -.06em; }
+.appointment-heading > p:last-child { max-width: 720px; margin: 0; color: #c5d4f2; font-size: 16px; line-height: 1.7; }
+.appointment-layout { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr); gap: 20px; align-items: stretch; }
+.appointment-fee, .appointment-actions { border: 1px solid #00e5ff55; border-radius: 12px; background: linear-gradient(145deg, #0d1a4a, #070d26 90%); box-shadow: 0 17px 42px #02081740; }
+.appointment-fee { padding: 30px; }
+.appointment-fee .eyebrow { margin-bottom: 13px; }
+.appointment-fee h3 { margin: 0 0 18px; color: white; font: 800 clamp(25px, 3vw, 32px)/1.2 var(--font-display); letter-spacing: -.04em; }
+.appointment-fee h3 span { display: inline-block; color: var(--cyan); white-space: nowrap; }
+.appointment-fee p:not(.eyebrow) { margin: 0 0 12px; color: #d3def7; font-size: 15px; line-height: 1.7; }
+.appointment-fee p:last-child { margin-bottom: 0; }
+.appointment-actions { padding: 30px; display: flex; flex-direction: column; justify-content: center; gap: 12px; background: radial-gradient(circle at 100% 0, #343bff66, transparent 45%), linear-gradient(145deg, #0d1a4a, #070d26 90%); }
+.appointment-actions .button { width: 100%; min-height: 54px; font-size: 14px; }
+.appointment-book { box-shadow: 0 8px 26px #00e5ff24; }
+.appointment-services { justify-content: center; }
 .finder-layout { display: grid; grid-template-columns: 1.12fr .88fr; gap: 20px; align-items: stretch; }
 .finder-form { padding: 27px 30px; border: 1px solid #c8d9f2; border-radius: 12px; background: white; box-shadow: 0 15px 40px #183c7610; }
 .finder-step { padding: 19px 0; display: grid; grid-template-columns: 38px 1fr; align-items: start; gap: 13px; border-bottom: 1px solid #e1eaf5; }
@@ -233,6 +249,7 @@ h1, h2, h3, p { margin-top: 0; }
   .repair-card-body { min-height: 185px; }
   .price-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .why-inner { gap: 45px; }
+  .appointment-layout { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 680px) {
   html { scroll-padding-top: 76px; }
@@ -261,6 +278,13 @@ h1, h2, h3, p { margin-top: 0; }
   .quick-bar small { font-size: 11px; }
   .quick-bar p { min-width: 0; }
   .finder-section, .repair-section, .pricing-section, .faq-section { padding-block: 62px 68px; }
+  .appointment-section { padding-block: 62px 68px; }
+  .appointment-heading h2 { font-size: 37px; }
+  .appointment-heading > p:last-child { font-size: 14px; }
+  .appointment-layout { gap: 14px; }
+  .appointment-fee, .appointment-actions { padding: 21px 18px; }
+  .appointment-fee h3 { font-size: 25px; }
+  .appointment-fee p:not(.eyebrow) { font-size: 14px; }
   .section-heading { margin-bottom: 24px; display: block; }
   .section-heading h2, .mobile-copy h2, .why-inner h2, .contact-inner h2 { font-size: 37px; }
   .section-heading > p { margin-top: 13px; font-size: 14px; }
