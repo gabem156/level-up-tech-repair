@@ -245,7 +245,7 @@ h1, h2, h3, p { margin-top: 0; }
   .nav.open { display: flex; }
   .nav > a:not(.nav-cta) { padding: 14px 4px; border-bottom: 1px solid #ffffff20; font-size: 15px; }
   .nav-cta { justify-content: center; margin-top: 14px; }
-  .hero-inner { padding-block: 42px 28px; grid-template-columns: 1fr; gap: 25px; }
+  .hero-inner { padding-block: 42px 28px; grid-template-columns: minmax(0, 1fr); gap: 25px; }
   .hero { background-image: linear-gradient(180deg, #030a1bed 0%, #030a1bdc 48%, #030a1b88 100%), url("assets/hero-repair-workstation.webp"); background-position: center, 75% center; background-size: 100% 100%, auto 100%; }
   .hero-copy { width: 100%; min-width: 0; }
   .hero-actions > .button { flex: 1 1 100%; width: 100%; }
