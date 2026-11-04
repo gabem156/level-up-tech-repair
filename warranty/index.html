@@ -37,7 +37,7 @@
           link.rel = "noopener noreferrer";
           link.addEventListener("click", (event) => {
             event.preventDefault();
-            const accepted = window.confirm("Before continuing to Square: the $25 booking deposit is due once per appointment, is applied toward the final repair cost, and is non-refundable if you cancel. This website does not collect payment. Square controls checkout; confirm the payment screen shows one deposit for your appointment before paying.");
+            const accepted = window.confirm("Before scheduling with Acuity: the $25 booking deposit is due once per appointment, is applied toward the final repair cost, and is non-refundable if you cancel. This website does not collect payment. Square handles deposit checkout; confirm the payment screen shows one deposit for your appointment before paying.");
             if (accepted) window.open(bookingUrl, "_blank", "noopener,noreferrer");
           });
         });
@@ -64,7 +64,7 @@
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button>
       <nav class="nav" id="primary-nav" aria-label="Main navigation">
         <a href="../index.html#repairs">Repairs</a><a href="../index.html#mobile-service">Mobile Service</a><a href="../index.html#pricing">Pricing</a><a href="../index.html#faq">FAQ</a>
-        <a class="nav-cta" data-booking-link href="https://www.leveluptechrepairfl.tech/">Book a Repair <span aria-hidden="true">↗</span></a>
+        <a class="nav-cta" data-booking-link href="https://app.acuityscheduling.com/schedule.php?owner=40785006&amp;ref=booking_button">Book a Repair <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
     <main id="main">
@@ -125,7 +125,7 @@
             <p class="eyebrow">HERE TO HELP</p><h2 id="policy-help-title">Questions about a repair?</h2>
             <p>Contact us about a warranty claim or ask about repair terms before you book.</p>
             <a class="policy-contact" href="mailto:info@leveluptechrepairfl.com">info@leveluptechrepairfl.com</a>
-            <a class="button button-cyan" data-booking-link href="https://www.leveluptechrepairfl.tech/">Book a Repair <span aria-hidden="true">↗</span></a>
+            <a class="button button-cyan" data-booking-link href="https://app.acuityscheduling.com/schedule.php?owner=40785006&amp;ref=booking_button">Book a Repair <span aria-hidden="true">↗</span></a>
           </aside>
         </div>
       </section>

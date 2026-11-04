@@ -12,7 +12,7 @@
     link.rel = "noopener noreferrer";
     link.addEventListener("click", (event) => {
       event.preventDefault();
-      const accepted = window.confirm("Before continuing to Square: the $25 booking deposit is due once per appointment, is applied toward the final repair cost, and is non-refundable if you cancel. This website does not collect payment. Square controls checkout; confirm the payment screen shows one deposit for your appointment before paying.");
+      const accepted = window.confirm("Before scheduling with Acuity: the $25 booking deposit is due once per appointment, is applied toward the final repair cost, and is non-refundable if you cancel. This website does not collect payment. Square handles deposit checkout; confirm the payment screen shows one deposit for your appointment before paying.");
       if (accepted) window.open(bookingUrl, "_blank", "noopener,noreferrer");
     });
   });
