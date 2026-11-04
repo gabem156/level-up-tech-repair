@@ -448,11 +448,16 @@ h1, h2, h3, p { margin-top: 0; }
   .mobile-service-inner { grid-template-columns: .8fr 1.2fr; gap: 36px; }
 }
 @media (max-width: 680px) {
-  .repair-card { display: flex; min-height: 0; }
-  .repair-card-link { display: grid; grid-template-columns: 34% minmax(0, 1fr); }
-  .repair-card-image { height: auto; min-height: 0; flex-basis: auto; }
-  .repair-card-body { min-height: 0; padding: 15px 14px; }
-  .repair-card p { font-size: 13px; }
+  .repair-card { display: flex; flex-direction: column; min-height: 0; }
+  .repair-card-link { display: flex; flex-direction: column; }
+  .repair-card-image { width: 100%; height: auto; flex: 0 0 auto; aspect-ratio: 16 / 8; }
+  .repair-card-image img { position: absolute; inset: 0; }
+  .repair-card-body { min-height: 0; padding: 18px; }
+  .repair-card h3 { margin-top: 7px; font-size: 19px; }
+  .repair-card p { margin-bottom: 13px; font-size: 14px; line-height: 1.6; }
+  .service-card-links { margin-top: 0; padding-top: 0; gap: 9px; }
+  .service-card-links a { font-size: 13px; }
+  .card-link { margin-top: 0; }
   .process-steps { max-width: 460px; grid-template-columns: 1fr; gap: 17px; }
   .process-steps::before { top: 22px; bottom: 22px; left: 21px; right: auto; width: 1px; height: auto; }
   .process-steps li { padding: 0; gap: 14px; }
@@ -466,10 +471,9 @@ h1, h2, h3, p { margin-top: 0; }
   .price-list dt, .price-list dd { font-size: 13px; }
 }
 @media (max-width: 390px) {
-  .repair-card-link { grid-template-columns: 31% minmax(0, 1fr); }
-  .repair-card-body { padding: 13px 11px; }
-  .repair-card h3 { font-size: 16px; }
-  .repair-card p { font-size: 12px; }
+  .repair-card-body { padding: 16px; }
+  .repair-card h3 { font-size: 18px; }
+  .repair-card p { font-size: 13px; }
 }
 
 /* Service links and balanced desktop repair cards */
