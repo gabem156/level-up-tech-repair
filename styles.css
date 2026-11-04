@@ -76,7 +76,7 @@ h1, h2, h3, p { margin-top: 0; }
 .finder-heading h2 { color: var(--navy); }
 .appointment-section { padding: 88px 0 96px; color: white; background: radial-gradient(ellipse at 85% 10%, #172c7a 0%, transparent 42%), linear-gradient(145deg, #07112e, #0b1c49); }
 .appointment-heading { max-width: 790px; margin: 0 0 32px; }
-.appointment-heading > .eyebrow, .appointment-fee > .eyebrow { color: #00758a; }
+.appointment-heading > .eyebrow, .appointment-fee > .eyebrow { color: #00758a; font-size: 14px; }
 .appointment-heading h2 { margin: 0 0 14px; color: white; font: 800 clamp(36px, 4.5vw, 52px)/1.08 var(--font-display); letter-spacing: -.06em; }
 .appointment-heading > p:last-child { max-width: 720px; margin: 0; color: #c5d4f2; font-size: 16px; line-height: 1.7; }
 .appointment-layout { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr); gap: 20px; align-items: stretch; }
