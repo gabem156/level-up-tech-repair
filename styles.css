@@ -36,8 +36,10 @@ img { display: block; max-width: 100%; }
 .nav-contact { position: relative; }
 .nav-contact summary { list-style: none; cursor: pointer; user-select: none; }
 .nav-contact summary::-webkit-details-marker { display: none; }
-.nav-contact-phone { position: absolute; z-index: 60; top: calc(100% + 8px); right: 0; min-width: 170px; padding: 13px 16px; border: 1px solid #00e5ff70; border-radius: 6px; color: white; background: #0b1941; box-shadow: 0 12px 30px #02081780; text-align: center; font-size: 15px; font-weight: 800; white-space: nowrap; }
-.nav-contact-phone:hover { color: var(--cyan); }
+.nav-contact-menu { position: absolute; z-index: 60; top: calc(100% + 8px); right: 0; min-width: 220px; padding: 6px; border: 1px solid #00e5ff70; border-radius: 6px; background: #0b1941; box-shadow: 0 12px 30px #02081780; }
+.nav-contact-option { display: block; padding: 11px 12px; border-radius: 4px; color: white; font-size: 14px; font-weight: 700; white-space: nowrap; }
+.nav-contact-option:hover { color: var(--cyan); background: #ffffff0a; }
+.nav-contact-email-mobile { display: none; }
 .menu-toggle { display: none; border: 1px solid #00e5ff70; border-radius: 5px; background: transparent; padding: 10px; }
 .menu-toggle span { display: block; width: 22px; height: 2px; margin: 4px 0; background: var(--cyan); }
 .announcement { min-height: 34px; padding: 6px 16px; display: flex; align-items: center; justify-content: center; gap: 9px; background: var(--blue); color: white; font-size: 12px; font-weight: 700; letter-spacing: .025em; }
@@ -300,6 +302,7 @@ h1, h2, h3, p { margin-top: 0; }
   .nav-cta-desktop { display: none; }
   .nav-cta-mobile { display: inline-flex; }
   .nav-contact-desktop { display: none; }
+  .nav > a.nav-contact-email-mobile { display: block; padding: 12px 4px 0; color: var(--cyan); font-size: 14px; font-weight: 700; text-align: center; }
   .business-bar-inner { width: calc(100% - 28px); grid-template-columns: 1fr 1fr; gap: 4px 0; padding-block: 9px; }
   .business-status { grid-column: 1 / -1; min-height: 36px; padding: 0 8px; border-bottom: 1px solid #ffffff20; }
   .business-hours > summary, .business-phone, .business-area, .business-rating { min-height: 40px; padding-inline: 8px; font-size: 12px; }
