@@ -218,13 +218,10 @@ h1, h2, h3, p { margin-top: 0; }
 .faq-list details[open] summary span { transform: rotate(45deg); }
 .faq-list details p { max-width: 720px; margin: 0; padding: 0 35px 19px 4px; color: #4e5c79; font-size: 14px; line-height: 1.75; }
 .contact-section { padding: 76px 0; color: white; background: radial-gradient(ellipse at 75% 25%, #263ca8 0%, transparent 45%), linear-gradient(120deg, #07112e, #111d62); }
-.contact-inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.contact-inner { display: flex; align-items: center; justify-content: flex-start; gap: 40px; }
+.contact-inner > div:first-child { width: 100%; max-width: 760px; }
 .contact-inner h2 { margin-bottom: 17px; color: white; }
 .contact-inner > div:first-child > p:not(.eyebrow) { max-width: 550px; color: #d4def7; font-size: 15px; line-height: 1.8; }
-.contact-details { min-width: 260px; padding: 22px; display: flex; flex-direction: column; align-items: center; border: 1px solid #ffffff40; border-radius: 8px; background: #ffffff0b; text-align: center; }
-.contact-brand-logo { width: 190px; max-width: 100%; height: 126px; margin: 0 auto 12px; object-fit: contain; }
-.contact-details .social-links { justify-content: center; }
-.contact-details .social-links a { min-width: 156px; justify-content: center; }
 .social-heading { margin: 0; color: #e2eaff; font-size: 14px; font-weight: 700; }
 .social-links { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px; }
 .social-links a { min-height: 44px; padding: 8px 10px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #ffffff30; border-radius: 6px; color: white; font-size: 13px; font-weight: 700; transition: border-color .18s ease, background .18s ease, color .18s ease; }
@@ -391,7 +388,6 @@ h1, h2, h3, p { margin-top: 0; }
   .contact-section { padding-block: 59px; }
   .contact-inner { align-items: stretch; flex-direction: column; gap: 28px; }
   .contact-inner > div:first-child > p:not(.eyebrow) { font-size: 14px; }
-  .contact-details { min-width: 0; }
   .footer { padding: 30px 0 17px; }
   .footer-inner { grid-template-columns: minmax(0, 1fr); gap: 14px; }
   .footer-card { padding: 21px; border-radius: 13px; }
