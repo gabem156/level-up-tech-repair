@@ -32,6 +32,7 @@ img { display: block; max-width: 100%; }
 .nav > a:not(.nav-cta):hover { color: var(--cyan); }
 .nav-cta { display: inline-flex; align-items: center; gap: 12px; padding: 14px 18px; border-radius: 5px; background: var(--cyan); color: var(--navy); box-shadow: 0 0 22px #00e5ff25; }
 .nav-cta span { color: var(--blue); }
+.nav-cta-mobile { display: none; }
 .menu-toggle { display: none; border: 1px solid #00e5ff70; border-radius: 5px; background: transparent; padding: 10px; }
 .menu-toggle span { display: block; width: 22px; height: 2px; margin: 4px 0; background: var(--cyan); }
 .announcement { min-height: 34px; padding: 6px 16px; display: flex; align-items: center; justify-content: center; gap: 9px; background: var(--blue); color: white; font-size: 12px; font-weight: 700; letter-spacing: .025em; }
@@ -263,6 +264,8 @@ h1, h2, h3, p { margin-top: 0; }
   .nav.open { display: flex; }
   .nav > a:not(.nav-cta) { padding: 14px 4px; border-bottom: 1px solid #ffffff20; font-size: 15px; }
   .nav-cta { justify-content: center; margin-top: 14px; }
+  .nav-cta-desktop { display: none; }
+  .nav-cta-mobile { display: inline-flex; }
   .hero-inner { padding-block: 42px 28px; grid-template-columns: minmax(0, 1fr); gap: 25px; }
   .hero { background-image: linear-gradient(180deg, #030a1bed 0%, #030a1bdc 48%, #030a1b88 100%), url("assets/hero-repair-workstation.webp"); background-position: center, 75% center; background-size: 100% 100%, auto 100%; }
   .hero-copy { width: 100%; min-width: 0; }
