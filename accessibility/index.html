@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMQQCM1325"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZMQQCM1325');</script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#07112e" />
+    <meta name="description" content="Learn about Level Up Tech Repair's efforts to make its website accessible and how to request assistance or report an accessibility issue." />
+    <link rel="canonical" href="https://www.leveluptechrepairfl.com/accessibility/" />
+    <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="../assets/favicon.ico?v=20261103" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png?v=20261103" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png?v=20261103" />
+    <link rel="icon" type="image/png" sizes="48x48" href="../assets/favicon-48.png?v=20261103" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192.png?v=20261103" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png?v=20261103" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Level Up Tech Repair" />
+    <meta property="og:title" content="Accessibility Statement | Level Up Tech Repair" />
+    <meta property="og:description" content="Learn about Level Up Tech Repair's efforts to make its website accessible and how to request assistance or report an accessibility issue." />
+    <meta property="og:url" content="https://www.leveluptechrepairfl.com/accessibility/" />
+    <title>Accessibility Statement | Level Up Tech Repair</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../config.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuButton = document.querySelector(".menu-toggle");
+        const nav = document.querySelector("#primary-nav");
+        menuButton.addEventListener("click", () => {
+          const open = menuButton.getAttribute("aria-expanded") !== "true";
+          menuButton.setAttribute("aria-expanded", String(open));
+          menuButton.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+          nav.classList.toggle("open", open);
+        });
+        nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+          nav.classList.remove("open");
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.setAttribute("aria-label", "Open navigation");
+        }));
+      });
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="Level Up Tech Repair home"><img class="brand-logo" src="../logo.png" alt="Level Up Tech Repair" /></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button>
+      <nav class="nav" id="primary-nav" aria-label="Main navigation">
+        <a href="../index.html#repairs">Repairs</a><a href="../index.html#mobile-service">Mobile Service</a><a href="../index.html#pricing">Pricing</a><a href="../index.html#faq">FAQ</a>
+        <details class="nav-contact nav-contact-desktop"><summary class="nav-cta nav-cta-desktop">Contact Us <span aria-hidden="true">⌄</span></summary><div class="nav-contact-menu"><a class="nav-contact-option" href="tel:+13215783486">Call 321-578-3486</a><a class="nav-contact-option" href="mailto:info@leveluptechrepairfl.com">info@leveluptechrepairfl.com</a></div></details><a class="nav-cta nav-cta-mobile" href="tel:+13215783486">Contact Us</a><a class="nav-contact-email-mobile" href="mailto:info@leveluptechrepairfl.com">Email Us</a>
+      </nav>
+    </header>
+    <main id="main"><section class="policy-hero" aria-labelledby="policy-title"><div class="section-container"><p class="eyebrow eyebrow-cyan">ACCESSIBILITY · WEBSITE SUPPORT</p><h1 id="policy-title">Accessibility Statement</h1><p class="policy-intro">Level Up Tech Repair aims to make its website accessible and usable for visitors with different abilities.</p></div></section><section class="policy-content" aria-label="Accessibility statement"><div class="section-container policy-layout"><div class="policy-sections"><article class="policy-section"><h2>Our Commitment</h2><p>Level Up Tech Repair aims to make its website accessible and usable for visitors with different abilities. We are committed to improving the accessibility of our website over time.</p></article>
+<article class="policy-section"><h2>Accessibility Efforts</h2><p>Our efforts include supporting keyboard navigation, providing readable content, using appropriate text contrast, and including accessible labels for website controls and content where appropriate.</p><p>Accessibility is an ongoing effort. Some website content or features may not yet work equally well for every visitor, and we welcome reports that help us identify improvements.</p></article>
+<article class="policy-section"><h2>Request Assistance or Report a Problem</h2><p>If you have difficulty accessing any part of this website, need information in a different format, or would like to report an accessibility issue, contact us at <a href="mailto:info@leveluptechrepairfl.com">info@leveluptechrepairfl.com</a>. Please describe the page or feature and the assistance you need so we can respond.</p></article></div><aside class="policy-aside" aria-labelledby="policy-contact-title"><p class="eyebrow">WE’RE HERE TO HELP</p><h2 id="policy-contact-title">Need assistance?</h2><p>Contact us to report a website accessibility problem or request help accessing information.</p><a class="policy-contact" href="mailto:info@leveluptechrepairfl.com">info@leveluptechrepairfl.com</a></aside></div></section></main>
+    <footer class="footer" aria-label="Site footer"><div class="section-container footer-inner">
+      <section class="footer-card footer-policies" aria-labelledby="footer-policies-title"><h2 id="footer-policies-title">Customer Policies &amp; Legal</h2><ul class="footer-policy-list"><li><a href="../privacy-policy/">Privacy Policy</a></li><li><a href="../terms-and-conditions/">Terms &amp; Conditions</a></li><li><a href="../warranty/">Warranty &amp; Repair Policy</a></li><li><a href="../cancellation-policy/">Cancellation &amp; Appointment Policy</a></li><li><a href="../accessibility/" aria-current="page">Accessibility Statement</a></li></ul><p class="social-heading">Follow Level Up Tech Repair</p><div class="social-links footer-social-links" aria-label="Social media"><a href="https://www.facebook.com/leveluptechrepair" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg class="social-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.8v8h3.4z" /></svg> Facebook <span aria-hidden="true">↗</span></a><a href="https://www.instagram.com/leveluptechrepair" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg class="social-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.7" r="1.2" /></svg> Instagram <span aria-hidden="true">↗</span></a></div></section>
+      <section class="footer-card footer-business" aria-labelledby="footer-business-title"><div class="footer-business-head"><a class="brand brand-footer" href="../index.html#home" aria-label="Level Up Tech Repair home"><img class="brand-logo" src="../logo.png" alt="Level Up Tech Repair" /></a><div><h2 id="footer-business-title">Level Up Tech Repair</h2><p>Professional mobile electronics repair with clear communication and convenient service across Seminole and Volusia Counties.</p></div></div><ul class="footer-business-links"><li><a href="../index.html#home">About Us</a></li><li><a href="../index.html#faq">Frequently Asked Questions</a></li><li><a href="../index.html#contact">Contact Us</a></li><li><a href="../index.html#mobile-service">Service Areas</a></li></ul><div class="footer-details"><p><b>Service:</b> Mobile repair in Seminole and Volusia Counties.</p><p><b>Business Hours:</b> Monday–Friday, 3 PM–8 PM · Saturday–Sunday, 11 AM–7 PM</p><p><b>Email:</b> <a href="mailto:info@leveluptechrepairfl.com">info@leveluptechrepairfl.com</a></p><p><b>Social:</b> <a href="https://www.facebook.com/leveluptechrepair" target="_blank" rel="noopener noreferrer">Facebook</a> · <a href="https://www.instagram.com/leveluptechrepair" target="_blank" rel="noopener noreferrer">Instagram</a></p></div></section>
+      <div class="footer-bottom"><p>© 2026 Level Up Tech Repair. All rights reserved.</p><a class="footer-top" href="../index.html#main">Back to top ↑</a></div>
+    </div></footer>
+  </body>
+</html>
