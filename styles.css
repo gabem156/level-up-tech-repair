@@ -33,6 +33,11 @@ img { display: block; max-width: 100%; }
 .nav-cta { display: inline-flex; align-items: center; gap: 12px; padding: 14px 18px; border-radius: 5px; background: var(--cyan); color: var(--navy); box-shadow: 0 0 22px #00e5ff25; }
 .nav-cta span { color: var(--blue); }
 .nav-cta-mobile { display: none; }
+.nav-contact { position: relative; }
+.nav-contact summary { list-style: none; cursor: pointer; user-select: none; }
+.nav-contact summary::-webkit-details-marker { display: none; }
+.nav-contact-phone { position: absolute; z-index: 60; top: calc(100% + 8px); right: 0; min-width: 170px; padding: 13px 16px; border: 1px solid #00e5ff70; border-radius: 6px; color: white; background: #0b1941; box-shadow: 0 12px 30px #02081780; text-align: center; font-size: 15px; font-weight: 800; white-space: nowrap; }
+.nav-contact-phone:hover { color: var(--cyan); }
 .menu-toggle { display: none; border: 1px solid #00e5ff70; border-radius: 5px; background: transparent; padding: 10px; }
 .menu-toggle span { display: block; width: 22px; height: 2px; margin: 4px 0; background: var(--cyan); }
 .announcement { min-height: 34px; padding: 6px 16px; display: flex; align-items: center; justify-content: center; gap: 9px; background: var(--blue); color: white; font-size: 12px; font-weight: 700; letter-spacing: .025em; }
@@ -70,6 +75,30 @@ h1, h2, h3, p { margin-top: 0; }
 .quick-bar p { margin: 0; display: flex; flex-direction: column; gap: 4px; }
 .quick-bar b { color: white; font: 800 13px var(--font-display); }
 .quick-bar small { color: #c5d4f2; font-size: 12px; line-height: 1.4; }
+.business-bar { position: relative; z-index: 12; border-top: 1px solid #00e5ff2b; border-bottom: 1px solid #00e5ff24; color: white; background: linear-gradient(100deg, #091638, #101f50); }
+.business-bar-inner { width: min(1160px, calc(100% - 64px)); min-height: 70px; margin-inline: auto; display: grid; grid-template-columns: auto auto auto minmax(190px, 1fr) auto; align-items: center; gap: 0; }
+.business-status, .business-hours > summary, .business-phone, .business-area, .business-rating { min-width: 0; min-height: 44px; padding-inline: 15px; display: flex; align-items: center; gap: 9px; border-right: 1px solid #ffffff24; color: #f4f7ff; font-size: 13px; font-weight: 700; white-space: nowrap; }
+.business-status { padding-left: 0; }
+.business-status-dot { width: 9px; height: 9px; flex: 0 0 9px; border-radius: 50%; background: #ff5c66; box-shadow: 0 0 10px #ff5c6660; }
+.business-status.is-open .business-status-dot { background: #35d58a; box-shadow: 0 0 10px #35d58a70; }
+.business-hours { position: relative; }
+.business-hours > summary { list-style: none; cursor: pointer; }
+.business-hours > summary::-webkit-details-marker { display: none; }
+.business-hours > summary > span:first-child { color: var(--cyan); }
+.business-caret { margin-left: auto; color: var(--cyan); font-size: 16px; transition: transform .18s ease; }
+.business-hours[open] .business-caret { transform: rotate(180deg); }
+.business-hours-menu { position: absolute; z-index: 70; top: calc(100% + 7px); left: 5px; width: 290px; padding: 17px 18px; border: 1px solid #425987; border-radius: 8px; background: #0b1941; box-shadow: 0 16px 36px #02081790; }
+.business-hours-menu > strong { display: block; margin-bottom: 10px; color: white; font: 800 15px var(--font-display); }
+.business-hours-menu dl { margin: 0; }
+.business-hours-menu dl > div { padding: 8px 0; display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid #ffffff18; color: #d5e0f3; font-size: 13px; }
+.business-hours-menu dd { margin: 0; color: white; font-weight: 700; white-space: nowrap; }
+.business-hours-menu small { display: block; padding-top: 9px; color: #aebfe2; font-size: 11px; }
+.business-phone { justify-content: center; color: white; }
+.business-phone:hover, .business-rating:hover { color: var(--cyan); }
+.business-phone > span:first-child, .business-area > span:first-child { color: var(--cyan); }
+.business-area { justify-content: center; }
+.business-rating { justify-content: flex-end; padding-right: 0; border-right: 0; }
+.business-stars { color: #ffd166; font-size: 17px; letter-spacing: .04em; }
 .finder-section { padding: 88px 0 96px; background: linear-gradient(145deg, #f4faff, #e1f1ff); }
 .section-heading { margin-bottom: 32px; display: flex; align-items: end; justify-content: space-between; gap: 35px; }
 .section-heading h2, .mobile-copy h2, .why-inner h2, .contact-inner h2 { margin: 0; font: 800 clamp(34px, 4.3vw, 50px)/1.08 var(--font-display); letter-spacing: -.06em; }
@@ -252,6 +281,10 @@ h1, h2, h3, p { margin-top: 0; }
   .price-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .why-inner { gap: 45px; }
   .appointment-layout { grid-template-columns: minmax(0, 1fr); }
+  .business-bar-inner { width: min(100% - 48px, 760px); grid-template-columns: repeat(3, minmax(0, 1fr)); padding-block: 8px; }
+  .business-status, .business-hours > summary, .business-phone, .business-area, .business-rating { justify-content: flex-start; padding-inline: 12px; border-right: 0; }
+  .business-status { padding-left: 0; }
+  .business-rating { padding-right: 0; }
 }
 @media (max-width: 680px) {
   html { scroll-padding-top: 76px; }
@@ -266,6 +299,14 @@ h1, h2, h3, p { margin-top: 0; }
   .nav-cta { justify-content: center; margin-top: 14px; }
   .nav-cta-desktop { display: none; }
   .nav-cta-mobile { display: inline-flex; }
+  .nav-contact-desktop { display: none; }
+  .business-bar-inner { width: calc(100% - 28px); grid-template-columns: 1fr 1fr; gap: 4px 0; padding-block: 9px; }
+  .business-status { grid-column: 1 / -1; min-height: 36px; padding: 0 8px; border-bottom: 1px solid #ffffff20; }
+  .business-hours > summary, .business-phone, .business-area, .business-rating { min-height: 40px; padding-inline: 8px; font-size: 12px; }
+  .business-area { grid-column: 1; white-space: normal; }
+  .business-rating { grid-column: 2; gap: 6px; flex-wrap: wrap; }
+  .business-stars { font-size: 15px; }
+  .business-hours-menu { left: 0; width: min(290px, calc(100vw - 40px)); }
   .hero-inner { padding-block: 42px 28px; grid-template-columns: minmax(0, 1fr); gap: 25px; }
   .hero { background-image: linear-gradient(180deg, #030a1bed 0%, #030a1bdc 48%, #030a1b88 100%), url("assets/hero-repair-workstation.webp"); background-position: center, 75% center; background-size: 100% 100%, auto 100%; }
   .hero-copy { width: 100%; min-width: 0; }

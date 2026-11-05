@@ -9,6 +9,64 @@
     link.rel = "noopener noreferrer";
   });
 
+  const businessStatus = document.querySelector("#business-status");
+  if (businessStatus) {
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const hoursByDay = [
+      { open: 11 * 60, close: 19 * 60 },
+      { open: 15 * 60, close: 20 * 60 },
+      { open: 15 * 60, close: 20 * 60 },
+      { open: 15 * 60, close: 20 * 60 },
+      { open: 15 * 60, close: 20 * 60 },
+      { open: 15 * 60, close: 20 * 60 },
+      { open: 11 * 60, close: 19 * 60 },
+    ];
+    const timeLabel = (minutes) => {
+      const hour = Math.floor(minutes / 60);
+      const minute = minutes % 60;
+      return `${hour % 12 || 12}:${String(minute).padStart(2, "0")} ${hour >= 12 ? "PM" : "AM"}`;
+    };
+    const refreshBusinessStatus = () => {
+      const parts = new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/New_York",
+        weekday: "long",
+        hour: "2-digit",
+        minute: "2-digit",
+        hourCycle: "h23",
+      }).formatToParts(new Date());
+      const values = Object.fromEntries(parts.map(({ type, value }) => [type, value]));
+      const today = days.indexOf(values.weekday);
+      const nowMinutes = Number(values.hour) * 60 + Number(values.minute);
+      const todayHours = hoursByDay[today];
+      const todayLabel = document.querySelector("[data-today-hours]");
+      if (todayLabel) todayLabel.textContent = `${days[today]} · ${timeLabel(todayHours.open)}–${timeLabel(todayHours.close)}`;
+
+      const statusText = businessStatus.querySelector("[data-business-status]");
+      if (nowMinutes >= todayHours.open && nowMinutes < todayHours.close) {
+        businessStatus.classList.add("is-open");
+        businessStatus.classList.remove("is-closed");
+        statusText.textContent = `Open now · closes at ${timeLabel(todayHours.close)}`;
+        return;
+      }
+
+      businessStatus.classList.add("is-closed");
+      businessStatus.classList.remove("is-open");
+      let offset = nowMinutes < todayHours.open ? 0 : 1;
+      let nextDay = (today + offset) % 7;
+      while (!hoursByDay[nextDay]) {
+        offset += 1;
+        nextDay = (today + offset) % 7;
+      }
+      const when = offset === 0 ? "today" : days[nextDay];
+      statusText.textContent = `Closed now · opens ${when} at ${timeLabel(hoursByDay[nextDay].open)}`;
+    };
+    refreshBusinessStatus();
+    window.setInterval(refreshBusinessStatus, 60_000);
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) refreshBusinessStatus();
+    });
+  }
+
   const phone = String(config.phone || "").trim();
   const phoneDigits = phone.replace(/\D/g, "");
   const phoneActions = document.querySelector("[data-phone-actions]");
