@@ -222,12 +222,6 @@ h1, h2, h3, p { margin-top: 0; }
 .contact-inner > div:first-child { width: 100%; max-width: 760px; }
 .contact-inner h2 { margin-bottom: 17px; color: white; }
 .contact-inner > div:first-child > p:not(.eyebrow) { max-width: 550px; color: #d4def7; font-size: 15px; line-height: 1.8; }
-.social-heading { margin: 0; color: #e2eaff; font-size: 14px; font-weight: 700; }
-.social-links { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px; }
-.social-links a { min-height: 44px; padding: 8px 10px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #ffffff30; border-radius: 6px; color: white; font-size: 13px; font-weight: 700; transition: border-color .18s ease, background .18s ease, color .18s ease; }
-.social-links a:hover { border-color: #00e5ff70; background: #00e5ff10; color: var(--cyan); }
-.social-logo { width: 20px; height: 20px; flex: 0 0 20px; fill: currentColor; }
-.social-links a span { color: var(--cyan); }
 .deposit-note { margin: 19px 0 0; padding-top: 14px; border-top: 1px solid #ffffff2b; color: #d8e3ff; font-size: 12px; }
 .footer { padding: 48px 0 22px; color: #d6e2ff; background: linear-gradient(145deg, #050a1c, #0b1537 68%, #101d4b); }
 .footer-inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 22px; }
@@ -241,10 +235,6 @@ h1, h2, h3, p { margin-top: 0; }
 .footer-policy-list a:hover { color: #007aab; }
 .footer-policy-list .policy-missing { color: #586781; }
 .footer-policy-list .policy-missing small { display: block; margin-top: 2px; color: #77849a; font-size: 11px; }
-.footer-card .social-heading { margin-top: 22px; color: inherit; }
-.footer-card .social-links { margin-top: 9px; }
-.footer-card .social-links a { min-height: 40px; border-color: #1d3b70; border-radius: 999px; color: #153269; }
-.footer-card .social-links a:hover { background: #dcefff; color: #006d9c; }
 .footer-business { color: #d6e2ff; background: linear-gradient(145deg, #080f27, #101d48); border-color: #304b82; }
 .footer-business h2 { color: white; }
 .footer-business-head { display: flex; align-items: flex-start; gap: 18px; }
